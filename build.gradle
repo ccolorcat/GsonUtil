@@ -63,7 +63,7 @@ project.ext {
     minSdkVersion = 15
     targetSdkVersion = sdkVersion
     versionCode = 1
-    versionName = "1.0.0"
+    versionName = "1.0.1"
 
     // dependencies
     supportAppcompat = "com.android.support:appcompat-v7:${supportVersion}"

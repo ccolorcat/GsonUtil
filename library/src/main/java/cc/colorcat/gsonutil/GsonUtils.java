@@ -22,11 +22,14 @@ import com.google.gson.GsonBuilder;
 import java.io.Reader;
 import java.lang.reflect.Type;
 
-public class JsonUtils {
+public class GsonUtils {
     private static Gson gson;
 
     public static void setGson(Gson gson) {
-        JsonUtils.gson = gson;
+        if (gson == null) {
+            throw new NullPointerException("gson == null");
+        }
+        GsonUtils.gson = gson;
     }
 
     public static Gson getGson() {
@@ -58,5 +61,5 @@ public class JsonUtils {
         return getGson().fromJson(reader, typeOfT);
     }
 
-    private JsonUtils() { throw new AssertionError("no instance"); }
+    private GsonUtils() { throw new AssertionError("no instance"); }
 }

@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 
-import cc.colorcat.gsonutil.JsonUtils;
+import cc.colorcat.gsonutil.GsonUtils;
 
 import static org.junit.Assert.assertEquals;
 
@@ -30,11 +30,11 @@ public class ExampleUnitTest {
         person.setBirthday(new Date());
         person.setPhones(new String[]{"1000", "1239"});
         person.setFriends(Arrays.asList("Tom", "Jerry"));
-        String json = JsonUtils.toJson(person);
+        String json = GsonUtils.toJson(person);
         System.out.println(json);
 
         String testJson = "{\"id\":null,\"age\":null,\"birthday\":null,\"phones\":null,\"friends\":null}";
-        Person testPerson = JsonUtils.fromJson(testJson, Person.class);
+        Person testPerson = GsonUtils.fromJson(testJson, Person.class);
         System.out.println(testPerson);
         assertEquals(testPerson.getId(), "");
         assertEquals(testPerson.getAge(), 0);
