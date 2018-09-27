@@ -62,7 +62,7 @@ project.ext {
     // android.defaultConfig
     minSdkVersion = 15
     targetSdkVersion = sdkVersion
-    versionCode = 1
+    versionCode = 2
     versionName = "1.0.1"
 
     // dependencies
